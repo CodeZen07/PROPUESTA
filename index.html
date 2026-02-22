@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi amada Kalir</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="pantalla1" class="seccion">
+        <h1 class="fade-in">¡Hola, KALIR! ❤️</h1>
+        <p>He preparado esto con mucho amor para ti...</p>
+        <button onclick="siguientePantalla(2)">Empezar aventura</button>
+        <div class="frase">"El amor es el lenguaje del corazón."</div>
+    </div>
+
+    <div id="pantalla2" class="seccion oculta">
+        <h2>Pregunta 1:</h2>
+        <p>¿Cuáles fueron las últimas flores que recibiste?</p>
+        <div class="opciones">
+            <button onclick="verificarRespuesta(true, 3)">Rosas Rojas, Girasoles y Rosas blancas</button>
+            <button onclick="verificarRespuesta(false)">Solo Rosas Rojas</button>
+            <button onclick="verificarRespuesta(false)">Flores variadas</button>
+        </div>
+        <div class="frase">"Eres la flor más bella de mi jardín."</div>
+    </div>
+
+    <div id="pantalla3" class="seccion oculta">
+        <h2>Pregunta 2:</h2>
+        <p>¿Qué lugar visitamos recientemente?</p>
+        <div class="opciones">
+            <button onclick="verificarRespuesta(false)">La playa</button>
+            <button onclick="verificarRespuesta(true, 4)">La casita de los deseos</button>
+            <button onclick="verificarRespuesta(false)">El cine</button>
+        </div>
+        <div class="frase">"Cada lugar es mágico si estoy a tu lado."</div>
+    </div>
+
+    <div id="pantalla4" class="seccion oculta">
+        <h2>Pregunta 3:</h2>
+        <p>¿A dónde es nuestra próxima salida?</p>
+        <div class="opciones">
+            <button onclick="verificarRespuesta(true, 5)">Zona colonial</button>
+            <button onclick="verificarRespuesta(false)">La playa</button>
+            <button onclick="verificarRespuesta(false)">El campo</button>
+        </div>
+        <div class="frase">"Nuestra mejor aventura apenas comienza."</div>
+    </div>
+
+    <div id="pantalla5" class="seccion oculta">
+        <h2>¡Atención, KALIR!</h2>
+        <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xqpeVnqldeM?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <button onclick="siguientePantalla(6)">Continuar...</button>
+        <div class="frase">"Incluso en los pantanos, el amor florece."</div>
+    </div>
+
+    <div id="pantalla6" class="seccion oculta">
+        <h1>KALIR...</h1>
+        <h2>¿Deseas ser mi novia? ❤️</h2>
+        <div class="botones-finales">
+            <button id="btn-si" onclick="finalFeliz()">¡SÍ!</button>
+            <button id="btn-no">No</button>
+        </div>
+        <div class="frase">"Eres mi hoy y todos mis mañanas."</div>
+    </div>
+
+    <div id="pantalla7" class="seccion oculta">
+        <h1>¡DIJO QUE SÍ! 🎉</h1>
+        <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VPwWaRAiqnk?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="frase">"Viviendo la vida loca contigo para siempre."</div>
+    </div>
+
+    <form id="notificacion" action="https://formspree.io/f/TU_ID_AQUÍ" method="POST" style="display:none;">
+        <input type="text" name="mensaje" value="¡KALIR aceptó ser tu novia!">
+    </form>
+
+</body>
+</html>
